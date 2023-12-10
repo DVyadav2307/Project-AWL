@@ -22,12 +22,17 @@ public class TeacherInterfaceController implements Initializable {
         
     }
 
-    // delete thsis later
+    // open dashboard interface on clicking
     public void loadDashboard(ActionEvent e)throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("DashboardInterface.fxml"));
         Parent DashboardInterface = loader.load();
-        TeacherInterfaceMainStackPane.getChildren().addAll(DashboardInterface);
+        TeacherInterfaceMainStackPane.getChildren().add(DashboardInterface);
+    }
 
+
+    public void loadMarkAttendence(ActionEvent e) throws Exception{
+        Parent markAttendenceInteface  = FXMLLoader.load(getClass().getResource("MarkAttendence.fxml"));
+        TeacherInterfaceMainStackPane.getChildren().add(markAttendenceInteface);
     }
 
 }

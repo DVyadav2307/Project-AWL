@@ -34,7 +34,7 @@
                         <String fx:value="dashbrdbtn" />
                      </styleClass>
                   </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="242.0" text="Mark Attendence">
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadMarkAttendence" prefHeight="67.0" prefWidth="242.0" text="Mark Attendence">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -98,7 +98,7 @@
                   <Image url="@Images/owl-side-look.png" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="662.0" layoutX="266.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="curvyborder" width="754.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="267.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="662.0" layoutX="266.0" layoutY="14.0" stroke="#ff91a1" strokeType="INSIDE" styleClass="curvyborder" width="754.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="267.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
             <StackPane fx:id="TeacherInterfaceMainStackPane" layoutX="290.0" layoutY="20.0" prefHeight="641.0" prefWidth="708.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="28.0" />
          </children>
          <stylesheets>

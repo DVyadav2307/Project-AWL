@@ -5,14 +5,13 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="708.0" stylesheets="@TeacherInterfaceStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MarkAttendenceController">
    <children>
-      <ComboBox editable="true" layoutX="39.0" layoutY="140.0" prefHeight="35.0" prefWidth="599.0" promptText="Course" />
-      <ComboBox editable="true" layoutX="39.0" layoutY="213.0" prefHeight="35.0" prefWidth="292.0" promptText="Semester" />
-      <ComboBox editable="true" layoutX="39.0" layoutY="294.0" prefHeight="35.0" prefWidth="292.0" promptText="Section" />
-      <ComboBox editable="true" layoutX="344.0" layoutY="213.0" prefHeight="35.0" prefWidth="292.0" promptText="Subject" />
-      <DatePicker layoutX="344.0" layoutY="294.0" prefHeight="35.0" prefWidth="292.0" promptText="Select Date" showWeekNumbers="true" />
+      <ComboBox fx:id="courseComboBox" layoutX="39.0" layoutY="140.0" prefHeight="35.0" prefWidth="599.0" promptText="Course" styleClass="combox" />
+      <ComboBox layoutX="39.0" layoutY="213.0" prefHeight="35.0" prefWidth="292.0" promptText="Semester" styleClass="combox" />
+      <ComboBox layoutX="39.0" layoutY="294.0" prefHeight="35.0" prefWidth="292.0" promptText="Section" styleClass="combox" />
+      <ComboBox layoutX="344.0" layoutY="213.0" prefHeight="35.0" prefWidth="292.0" promptText="Subject" styleClass="combox" />
+      <DatePicker editable="false" layoutX="355.0" layoutY="298.0" prefHeight="27.0" prefWidth="271.0" promptText="Select Date" showWeekNumbers="true" style="-fx-background-radius: 15; -fx-background-color: pink; -fx-scale-shape: 1000;" />
       <Button layoutX="344.0" layoutY="368.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="292.0" text="Button" />
    </children>
 </AnchorPane>
