@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="loginAnchorPane" layoutY="74.0" prefHeight="671.0" prefWidth="446.0" styleClass="whiteBackgournd" stylesheets="@LoginAndSigninStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="LoginPageButton" layoutX="78.0" layoutY="305.0" mnemonicParsing="false" onAction="#Login" prefHeight="39.0" prefWidth="290.0" styleClass="loginButton" text="Login" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <TextField fx:id="hiddenPasswordLoginPageTextField" layoutX="78.0" layoutY="222.0" onKeyTyped="#synchronizePasswordAndHiddenFeild" onMouseClicked="#removeError" prefHeight="39.0" prefWidth="290.0" promptText="Password" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="textfield" />
+                        <String fx:value="whiteBackgournd" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="emailLoginPageTextField" focusTraversable="false" layoutX="78.0" layoutY="177.0" onMouseClicked="#removeError" prefHeight="39.0" prefWidth="290.0" promptText="Email ID" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="whiteBackgournd" />
+                        <String fx:value="textfield" />
+                     </styleClass></TextField>
+                  <PasswordField fx:id="passwordLoginPagePasswordField" layoutX="78.0" layoutY="222.0" onKeyTyped="#synchronizePasswordAndHiddenFeild" onMouseClicked="#removeError" prefHeight="39.0" prefWidth="290.0" promptText="Password" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="whiteBackgournd" />
+                        <String fx:value="textfield" />
+                     </styleClass></PasswordField>
+                  <CheckBox fx:id="showPasswordLoginPageCheckBox" layoutX="78.0" layoutY="279.0" mnemonicParsing="false" onAction="#showOrHidePassword" prefHeight="17.0" prefWidth="290.0" styleClass="whiteBackgournd" text="Show password" textFill="#ff6b81" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0" />
+                  <Label layoutX="125.0" layoutY="620.0" prefHeight="17.0" prefWidth="138.0" text="Not registered yet?" textFill="#ff6b81" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="125.0" />
+                  <Hyperlink fx:id="registerHereLoginPageHyperlink" layoutX="236.0" layoutY="617.0" onAction="#switchInterface" prefHeight="24.0" prefWidth="95.0" text="Register here" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="115.0" />
+                  <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="183.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/NerdyOwl.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="183.0" fitWidth="217.0" layoutX="115.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="114.0">
+                     <image>
+                        <Image url="@Images/Checklist.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="passwordErrorLoginPageImageView" fitHeight="31.0" fitWidth="36.0" layoutX="63.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/warning.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emailErrorLoginPageImageView" fitHeight="31.0" fitWidth="36.0" layoutX="63.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/warning.gif" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="otherInfoLoginPageLabel" layoutX="78.0" layoutY="261.0" prefHeight="17.0" prefWidth="290.0" textFill="#ff6b81">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signupAnchorPane" prefHeight="671.0" prefWidth="446.0" styleClass="whiteBackgournd" stylesheets="@LoginAndSigninStyles.css" visible="false">
+               <children>
+                  <Button fx:id="registerSignupButton" layoutX="78.0" layoutY="329.0" mnemonicParsing="false" onAction="#register" prefHeight="39.0" prefWidth="290.0" styleClass="loginButton" text="Register" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="emailSingupTextField" layoutX="78.0" layoutY="177.0" onMouseClicked="#removeError" prefHeight="39.0" prefWidth="290.0" promptText="Enter Email" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="whiteBackgournd" />
+                        <String fx:value="textfield" />
+                     </styleClass>
+                  </TextField>
+                  <PasswordField fx:id="passwordSignupPasswordField" layoutX="78.0" layoutY="222.0" onMouseClicked="#removeError" prefHeight="39.0" prefWidth="290.0" promptText="Create Password" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="whiteBackgournd" />
+                        <String fx:value="textfield" />
+                     </styleClass>
+                  </PasswordField>
+                  <PasswordField fx:id="confirmPasswordSignupPasswordField" layoutX="78.0" layoutY="267.0" onKeyTyped="#matchPasswordOnEveryPress" onMouseClicked="#removeError" prefHeight="39.0" prefWidth="290.0" promptText="Confirm Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="whiteBackgournd" />
+                        <String fx:value="textfield" />
+                     </styleClass>
+                  </PasswordField>
+                  <Label layoutX="125.0" layoutY="620.0" prefHeight="17.0" prefWidth="138.0" text="Already registered ?" textFill="#ff6b81" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="125.0" />
+                  <Hyperlink fx:id="loginHereSignupHyperlink" layoutX="236.0" layoutY="617.0" onAction="#switchInterface" prefHeight="24.0" prefWidth="95.0" text="Login here" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="115.0" />
+                  <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="183.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/NerdyOwl.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="183.0" fitWidth="217.0" layoutX="115.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="114.0">
+                     <image>
+                        <Image url="@Images/Checklist.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emailErrorSignupImageView" fitHeight="31.0" fitWidth="36.0" layoutX="63.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/warning.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="passwordErrorSignupImageView" fitHeight="31.0" fitWidth="36.0" layoutX="63.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/warning.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="passwordConfirmErrorSignupImageView" fitHeight="31.0" fitWidth="36.0" layoutX="63.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/warning.gif" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="otherInfoSignupLabel" layoutX="78.0" layoutY="306.0" prefHeight="17.0" prefWidth="290.0" textFill="#ff6b81">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

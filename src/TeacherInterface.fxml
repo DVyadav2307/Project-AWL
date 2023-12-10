@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1041.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeacherInterfaceController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="whiteBackgournd">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutY="124.0" prefHeight="578.0" prefWidth="267.0" spacing="30.0" styleClass="pink" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="124.0">
+               <children>
+                  <Button fx:id="dashboardButton" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="67.0" prefWidth="242.0" text="Dashboard">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="-18.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="dashbrdbtn" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="242.0" text="Mark Attendence">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="mrkattndnce" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="77.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="242.0" text="Check Attendence">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="chkattndnce" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="144.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="242.0" text="Edit Students">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="-5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="editstdnse" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="211.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="242.0" text="Messeges">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="-30.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="msg" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+            <Label layoutX="89.0" layoutY="20.0" prefHeight="59.0" prefWidth="103.0" styleClass="blue" text="AWL" textFill="#8a8a8a">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font></Label>
+            <Label layoutX="89.0" layoutY="70.0" prefHeight="17.0" prefWidth="125.0" styleClass="blue" text="Attendence Watch Log" textFill="#8a8a8a">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="77.0" fitWidth="74.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/owl-side-look.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="662.0" layoutX="266.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="curvyborder" width="754.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="267.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <StackPane fx:id="TeacherInterfaceMainStackPane" layoutX="290.0" layoutY="20.0" prefHeight="641.0" prefWidth="708.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="28.0" />
+         </children>
+         <stylesheets>
+            <URL value="@TeacherInterfaceStyles.css" />
+            <URL value="@LoginAndSigninStyles.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</StackPane>

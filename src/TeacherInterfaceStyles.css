@@ -1,0 +1,60 @@
+
+.removeScrollbar{
+    -fx-hbar-policy: never
+    -fx;
+}
+
+.curvyborder{
+    -fx-arc-height: 50px;
+    -fx-arc-width: 50px;
+}
+
+.buttons{
+    -fx-background-color: rgb(255, 247, 247);
+    -fx-background-radius: 30px;    
+}
+.buttons:hover{
+    -fx-background-color: rgb(252, 145, 161);
+    -fx-text-fill: white;
+}
+.buttons:pressed{
+    -fx-background-color: rgb(255, 182, 193);
+
+}
+
+
+.dashbrdbtn{
+    -fx-background-image: url(Images/buttonIcons/dashboard-black.png);
+}
+.dashbrdbtn:hover{
+    -fx-background-image: url(Images/buttonIcons/dashboard-white.png);
+}
+
+.mrkattndnce{
+    -fx-background-image: url(Images/buttonIcons/mark-attendence-black.png);
+}
+.mrkattndnce:hover{
+    -fx-background-image: url(Images/buttonIcons/mark-attendence-white.png);
+}
+
+.chkattndnce{
+    -fx-background-image: url(Images/buttonIcons/check-attendence-black.png);
+}
+.chkattndnce:hover{
+    -fx-background-image: url(Images/buttonIcons/check-attendence-white.png);
+}
+
+.editstdnse{
+    -fx-background-image: url(Images/buttonIcons/edit-sudents-black.png);
+}
+.editstdnse:hover{
+    -fx-background-image: url(Images/buttonIcons/edit-students-white.png);
+}
+
+.msg{
+    -fx-background-image: url(Images/buttonIcons/messegas-black.png);
+}
+.msg:hover{
+    -fx-background-image: url(Images/buttonIcons/messages-white.png);
+}
+
